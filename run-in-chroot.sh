@@ -1,9 +1,9 @@
 #!bin/sh
-cat /usr/share/zoneinfo/
+ls /usr/share/zoneinfo
 echo "select zone"
 read zone
 
-cat /usr/share/zoneinfo/$zone
+ls /usr/share/zoneinfo/$zone
 echo "select subzone"
 read subzone
 
