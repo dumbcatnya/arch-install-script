@@ -4,9 +4,11 @@ pacman -S nvidia nvidia-utils xf86-video-ati xf86-video-intel
 pacman -S gnome gnome-extra networkmanager
 systemctl enable gdm 
 systemctl enable NetworkManager 
-useradd -m -G wheel '$username'
+echo "type username:"
+read username
+useradd -m -G wheel $username
 echo "type user password:"
-passwd '$username'
+passwd $username
 
 echo "root ALL=(ALL:ALL) ALL" > /etc/sudoers
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
