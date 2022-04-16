@@ -34,8 +34,10 @@ swapon /dev/$swappartition
 pacman -Syy
 mount /dev/$rootpartition /mnt
 
+cd /mnt
 wget https://raw.githubusercontent.com/rushia272/arch-install-script/main/run-in-chroot.sh
+cd
 pacstrap /mnt base linux linux-firmware sudo nano
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt run-in-chroot.sh
+arch-chroot /mnt /bin/bash run-in-chroot.sh
 #end of script
