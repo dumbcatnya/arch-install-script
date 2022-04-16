@@ -3,12 +3,6 @@ if nc -zw1 google.com 443; then
   echo "connected to internet"
     else echo "connect to internet first" exit
 fi
-echo "Type hostname:"
-read hostname
-export hostname
-echo "Type user name:"
-read username
-export username
 
 fdisk -l
 echo "select drive for arch install"
