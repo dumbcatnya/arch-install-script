@@ -16,8 +16,10 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
 
-echo '$hostname' > /etc/hostname
-echo "127.0.1.1" '$hostname' >> /etc/hosts
+echo "type hostname:"
+read hostname
+echo $hostname > /etc/hostname
+echo "127.0.1.1" $hostname >> /etc/hosts
 
 echo "set password for root"
 passwd 
