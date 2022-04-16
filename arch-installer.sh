@@ -35,6 +35,7 @@ pacman -Syy
 mount /dev/$rootpartition /mnt
 
 cd /mnt
+rm run-in-chroot.sh
 wget https://raw.githubusercontent.com/rushia272/arch-install-script/main/run-in-chroot.sh
 cd
 pacstrap /mnt base linux linux-firmware sudo nano
