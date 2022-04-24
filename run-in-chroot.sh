@@ -23,10 +23,11 @@ echo "127.0.1.1" $hostname >> /etc/hosts
 
 echo "set password for root"
 passwd 
-
+echo "type boot partition:"
+read bootpartition
 pacman -S grub efibootmgr os-prober mtools
 mkdir /boot/efi
-mount /dev/'$bootpartition' /boot/efi
+mount /dev/$bootpartition /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S git wget
