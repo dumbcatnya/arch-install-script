@@ -31,6 +31,6 @@ mount /dev/$bootpartition /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S git wget
-wget https://raw.githubusercontent.com/rushia272/arch-install-script/main/install-gnome.sh
+wget https://raw.githubusercontent.com/rushia27/arch-install-script/main/install-gnome.sh
 sh install-gnome.sh
 #end of script
