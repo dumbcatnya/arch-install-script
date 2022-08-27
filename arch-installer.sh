@@ -30,9 +30,9 @@ mount /dev/$rootpartition /mnt
 
 cd /mnt
 rm run-in-chroot.sh
-wget https://raw.githubusercontent.com/rushia27/arch-install-script/main/run-in-chroot.sh
+wget https://raw.githubusercontent.com/rushia27/arch-install-script/main/chroot.sh
 cd
 pacstrap /mnt base linux linux-firmware sudo nano
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt /bin/bash run-in-chroot.sh
+arch-chroot /mnt /bin/bash chroot.sh
 #end of script
